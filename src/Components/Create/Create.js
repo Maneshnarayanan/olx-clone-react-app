@@ -32,6 +32,7 @@ const Create = () => {
     const [category, setcategory] = useState("");
     const [price, setPrice] = useState("");
     const [image, setImage] = useState(null);
+    const date = new Date()
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -53,6 +54,7 @@ const Create = () => {
                               price,
                               image:url,
                               userid:userDetails.id,
+                              createdate:date.toDateString()
                           });
                       }
                     });
